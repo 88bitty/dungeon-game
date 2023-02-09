@@ -18,3 +18,26 @@ if(named==False):
         f.write(name)
 else:
     pass
+
+roomCount = 0
+
+def genRoom():
+    global roomCount
+    roomCount += 1
+    i = random.randint(1,4)
+    if(roomCount==5):
+        print("You found a portal!")
+    elif(i==1):
+        print("you found an enemy!")
+    elif(i==2):
+        print("you found a treasure chest!")
+    elif(i==3):
+        print("you found a campfire")
+    elif(i==4):
+        print("you found a strange event")
+    else:
+        print("something went wrong.")
+    
+while True:
+    genRoom()
+    time.sleep(3)
